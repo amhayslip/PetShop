@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>PetShop</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet" />
+</head>
+<body>
+
+  <h1>PETSHOP</h1>
+  <hr />
+
+  <div class="pet-shop"></div>
+
+  <!-- Templates -->
+
+  <div id="templates">
+    <script type="text/template" class="pet">
+      <div class="pet">
+        <h2>{ title }</h2>
+        <div class="photo">
+          <img src="{ imgSrc }" />
+          <div class="total-like-count"></div>
+        </div>
+
+        <div class="comments"></div>
+
+        <form>
+          <input class="author" type="text" />
+          <input class="message" type="text" />
+          <button>Submit</button>
+        </form>
+      </div>
+    </script>
+
+    <script type="text/template" class="comment">
+      <div class="comment" data-id="{id}">
+        <b class="author">{ author }</b>: { message } -
+        <span class="like-count"></span> <a href="#" class="like">Like</a>
+      </div>
+    </script>
+  </div>
+
+
+
+
+  <script src="vendor/js/jquery-1.10.2.min.js"></script>
+  <script src="vendor/js/riot.js"></script>
+  <script src="js/models/comment.js"></script>
+  <script src="js/presenters/comment-form.js"></script>
+  <script src="js/presenters/comment-list.js"></script>
+  <script src="js/presenters/pet-shop.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>
